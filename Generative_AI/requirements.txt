@@ -1,9 +1,0 @@
-langchain
-langchain-community
-langchain-groq
-langchain-google-genai
-google-generativeai
-groq
-python-dotenv
-ipykernel
-jupyter
