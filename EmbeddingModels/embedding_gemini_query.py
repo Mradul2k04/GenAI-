@@ -1,11 +1,18 @@
-from langchain_google_genai import GoogleGenerativeAIEmbeddings
-
+from langchain_cohere import CohereEmbeddings
 from dotenv import load_dotenv
 
 load_dotenv()
+embeddings = CohereEmbeddings(
+    model="embed-english-v3.0"
+)
+# vector = embeddings.embed_query("What is the capital of India?")
+# print(len(vector))
 
-embedding=GoogleGenerativeAIEmbeddings(model="text-embedding-004",dimensions=32)
+docs = [
+    "Delhi is the capital of India.",
+    "Paris is the capital of France."
+]
 
-result=embedding.embed_query("Delhi is the Capital of India")
-
-print(str(result))
+vectors = embeddings.embed_documents(docs)
+print(len(vectors))
+print(len(vectors[0]))
