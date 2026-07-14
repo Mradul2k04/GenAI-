@@ -1,0 +1,13 @@
+langchain
+langchain_community
+langchain_openai
+langchain-groq
+python-dotenv
+langchain-google-genai
+langchain-huggingface
+transformers
+cohere
+langchain-cohere
+pydeck     
+streamlit
+grandalf
